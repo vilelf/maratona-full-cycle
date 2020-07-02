@@ -1,0 +1,18 @@
+service: desafio3
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: us-east-1
+
+functions:
+  soma:
+    handler: handler.soma
+    events:
+      - http:
+          path: soma
+          method: get
+
+plugins:
+  - serverless-offline
