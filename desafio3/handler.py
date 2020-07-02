@@ -7,7 +7,7 @@ def soma(event, context):
         b = int(event['queryStringParameters']['b'])
         result = a + b
     except TypeError:
-        result = "Você precisa passar os parametros a e b"
+        result = 0
     body = {
         "resultado": result
     }
